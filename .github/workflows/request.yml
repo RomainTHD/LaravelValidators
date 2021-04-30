@@ -1,0 +1,22 @@
+name: Test request
+on: [push, pull_request]
+jobs:
+    request:
+        name: Request
+        runs-on: ubuntu-latest
+        steps:
+        -   uses: "Satak/webrequest-action@v1.2.3"
+            with:
+                url: ${{ secrets.REQUEST_URL }}
+                method: POST
+                payload: |
+                    {
+                        "a.*.y.t": "integer",
+                        "a.*.y.u": "integer",
+                        "a.*.z": "object|keys:w,o",
+                        "b": "array",
+                        "b.c": "string",
+                        "b.d": "object",
+                        "b.d.e": "integer|min:5",
+                        "b.d.f": "string"
+                    }
