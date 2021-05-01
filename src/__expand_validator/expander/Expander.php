@@ -3,16 +3,14 @@
 namespace API;
 
 use API\Expander\ArrayExpander;
-use API\Expander\GenericExpander;
 use API\Expander\LeafExpander;
 use API\Expander\ObjectExpander;
 use API\Expander\ExpanderType;
 
-require_once "ExpanderType.php";
-
 require_once "ArrayExpander.php";
 require_once "LeafExpander.php";
 require_once "ObjectExpander.php";
+require_once "ExpanderType.php";
 
 /**
  * Main expander
