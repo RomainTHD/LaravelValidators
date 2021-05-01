@@ -3,5 +3,3 @@
 # Hide the directory behind a 404
 RewriteEngine on
 RewriteRule ^(.*)$ [L,R=404]
-
-ErrorDocument 404 /404.php
