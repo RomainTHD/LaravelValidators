@@ -1,0 +1,7 @@
+# Disable directory access, we have to use the route `/expand_validator`.
+
+# Hide the directory behind a 404
+RewriteEngine on
+RewriteRule ^(.*)$ [L,R=404]
+
+ErrorDocument 404 /404.php

@@ -1,0 +1,14 @@
+# Rewrite engine
+RewriteEngine on
+
+# Allow accessing without the ".php" file extension
+RewriteCond %{REQUEST_URI} !\.php$ [NC]
+RewriteCond %{REQUEST_URI} [^/]$
+RewriteRule ^(.*)$ $1.php [L]
+
+# Allow a trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [L]
+
+ErrorDocument 404 /404.php
