@@ -1,0 +1,63 @@
+POST http://localhost/expand_validator HTTP/1.1
+Content-Type: application/json
+
+{
+    "a.*.y.t": "integer"
+}
+
+> request_0_test.js
+
+###
+
+POST http://localhost/expand_validator HTTP/1.1
+Content-Type: application/json
+
+{
+    "a.*.y.t": "integer",
+    "a.*.y.u": "integer"
+}
+
+> request_1_test.js
+
+###
+
+POST http://localhost/expand_validator HTTP/1.1
+Content-Type: application/json
+
+{
+    "a.*.y.t": "integer",
+    "a.*.y.u": "integer",
+    "a.*.z": "object|keys:w,o"
+}
+
+> request_2_test.js
+
+###
+
+POST http://localhost/expand_validator HTTP/1.1
+Content-Type: application/json
+
+{
+    "b": "array",
+    "b.c": "string"
+}
+
+> request_3_test.js
+
+###
+
+POST http://localhost/expand_validator HTTP/1.1
+Content-Type: application/json
+
+{
+    "a.*.y.t": "integer",
+    "a.*.y.u": "integer",
+    "a.*.z": "object|keys:w,o",
+    "b": "array",
+    "b.c": "string",
+    "b.d": "object",
+    "b.d.e": "integer|min:5",
+    "b.d.f": "string"
+}
+
+> request_4_test.js
