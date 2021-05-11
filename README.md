@@ -1,14 +1,4 @@
-# Technical Exercise for first recruitment
-
-I chose the Backend exercise.
-
-The result is available on a Web Server I sent you by mail.
-
-## Backend
-
-I chose PHP as my technology.
-
-GitHub Workflows can act as a proof that my Web server works fine.
+# Laravel validators processing
 
 ### Input Example
 
@@ -25,7 +15,7 @@ GitHub Workflows can act as a proof that my Web server works fine.
 }
 ```
 
-## Output Example
+### Output Example
 ```json
 {
     "a": {
